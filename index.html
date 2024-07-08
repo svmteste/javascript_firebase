@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>IFNMG - Login Simples e Firebase</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="content_container">
-    <div id="form_container">
-      <div id="form_header_container">
-        <h2 id="form_header"> Login + Firebase </h2>
-      </div>
-
-      <div id="form_content_container">
-        <div id="form_content_inner_container">
-          <input type="email" id="email" placeholder="Email">
-          <input type="password" id="password" placeholder="Password">
-
-          <div id="button_container">
-            <button id="loginButton">Logar</button>
-            <button id="registerButton">Cadastre-se</button>
-          </div>
-
-          
-          <div id="feedback" style="margin-top: 10px;"></div>
-        </div>
-      </div>
+    <h1>Cadastro de Livros - IFNMG</h1>
+    <form id="formLivro">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" required>
+        <button type="submit">Adicionar Livro</button>
+    </form>
+    <div id="listaLivros">
+        <h2>Lista de Livros</h2>
+        <ul id="livros"></ul>
     </div>
-  </div>
+    <!-- Adicione o SDK do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
