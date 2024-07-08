@@ -14,4 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Inicializa as variáveis auth e database para facilitar o acesso aos serviços do Firebase
 const auth = firebase.auth();
-const database = firebase.database();
+
+// Inicializa as variáveis auth e database para facilitar o acesso aos serviços do Firebase
+//const auth = firebase.auth();
+const db = firebase.firestore();
